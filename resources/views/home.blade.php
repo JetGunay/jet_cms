@@ -15,6 +15,14 @@
                     @endif
 
                     You are logged in!
+                    {{ Auth::user()->name }}
+                    {{-- @if($service == 'google')
+                        <div class="title">
+                            <h1>Welcome {{ $details->name }}</h1> <br>
+                            Your email is: {{ $details->email }} <br>
+                            <img src="{{ $details->avatar }}" alt="">
+                        </div>
+                    @endif --}}
                 </div>
             </div>
         </div>

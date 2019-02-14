@@ -107,6 +107,8 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <a href="{{ url('redirect/google') }}" class="button is-link">Google</a>
+
                                 @if (Route::has('password.request'))
                                     <a class="button is-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password') }}

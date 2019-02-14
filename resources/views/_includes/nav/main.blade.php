@@ -29,7 +29,7 @@
             </div>
         </div>
     </nav> --}}
-    {{-- <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="https://bulma.io">
                 <img src="{{ asset('images/logo.png') }}" width="112" height="28">
@@ -74,22 +74,54 @@
                   </div>
                 </div>
               </div>
-          
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-custom">
-                      <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                      Log in
-                    </a>
+
+              {{-- @if (Auth::guest())
+                    <a href="#" class="nav-item is-tab">Log In</a>
+                    <a href="#" class="nav-item is-tab">Sign Up</a>   
+                @else
+                    <button class="dropdown nav-item is-tab">
+                        Hey Jet <span class="icon"><i class="fa fa-caret-down"></i></span>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li class="seperator"></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </button>         
+                @endif --}}
+              
+                @if (Auth::guest())
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-custom">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                          Log in
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                @else
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a href="/logout" class="button is-custom">
+                          Log Out
+                        </a>
+                        <p>Hey Jet</p>
+                      </div>
+                    </div>
+                  </div>
+                @endif
+          
+              
             </div>
-          </nav> --}}
-          <nav class="level navbar desktop" role="navigation" aria-label="main navigation">
+          </nav>
+          {{-- <nav class="level navbar desktop" role="navigation" aria-label="main navigation">
                 <p class="level-item has-text-centered">
                   <a class="link is-info">About</a>
                 </p>
@@ -123,4 +155,4 @@
             <p class="level-item has-text-centered">
                 <a class="link is-info"><i class="fa fa-info" aria-hidden="true"></i></a>
             </p>
-        </nav>
+        </nav> --}}

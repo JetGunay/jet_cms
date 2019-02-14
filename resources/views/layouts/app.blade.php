@@ -71,11 +71,16 @@
                 </div>
             </div>
         </nav> --}}
-        @include('_includes.nav.main')
-
+        @if (Auth::guest())
         <main class="py-4">
-            @yield('content')
-        </main>
+                @yield('content')
+            </main>
+        @else 
+            @include('_includes.nav.main')
+            <main class="py-4">
+                @yield('content')
+            </main>
+        @endif
     </div>
 </body>
 </html>
