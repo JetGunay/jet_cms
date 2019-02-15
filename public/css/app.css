@@ -17596,6 +17596,17 @@ label.panel-block:hover {
   padding-right: 100px;
 }
 
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+textarea,
+input {
+  outline: none !important;
+  box-shadow: none;
+}
+
 nav.navbar {
   margin-bottom: 15px;
   border-bottom: 1px solid #eee;
@@ -17618,6 +17629,165 @@ nav.navbar {
   background-color: #ab4b3f;
   border-color: transparent;
   color: #fff;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.centered article {
+  background: linear-gradient(to bottom, #003783 0%, #cd0001 100%);
+  color: #fff;
+  padding: 30px 60px;
+}
+
+main.login-page {
+  background-image: url("/images/bg-01.jpg");
+  width: 100%;
+  height: 100vh;
+}
+
+main.login-page:before {
+  content: "";
+  background-color: #000000d9;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  position: absolute;
+}
+
+.login .content {
+  padding: 1em 0;
+}
+
+.login .field {
+  margin-bottom: 13%;
+}
+
+.login .input--chisato {
+  padding-top: 1em !important;
+}
+
+.login .input,
+.login .taginput .taginput-container.is-focusable,
+.taginput .login .taginput-container.is-focusable {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 1em;
+  max-width: 350px;
+  height: 45px;
+  width: calc(100% - 1em);
+  background-color: transparent;
+  border: 0px;
+  box-shadow: inset 0 0px 0px transparent;
+}
+
+.login .input:focus,
+.login .taginput .taginput-container.is-focusable:focus,
+.taginput .login .taginput-container.is-focusable:focus {
+  outline: 1px solid transparent;
+}
+
+.login .input .input__field,
+.login .taginput .taginput-container.is-focusable .input__field,
+.taginput .login .taginput-container.is-focusable .input__field {
+  border: 1px solid #a95656bd;
+}
+
+.login .input label,
+.login .taginput .taginput-container.is-focusable label,
+.taginput .login .taginput-container.is-focusable label {
+  font-size: 14px;
+  top: 10%;
+}
+
+.login .btn {
+  padding: 13px 80px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.login .btn:before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.login .btn:hover span {
+  color: #fff;
+}
+
+.login .btn span {
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+.login .btn span img {
+  padding-right: 10px;
+}
+
+.login .btn-1 {
+  border: 0px;
+  color: #000;
+  background-color: #fff;
+}
+
+.login .btn-1c:before {
+  border-radius: 5px;
+  background: #000;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login .btn-1c:hover:before,
+.login .btn-1c:active:before {
+  width: 100%;
+}
+
+.login .remember {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.login .remember span {
+  font-size: 13px;
+}
+
+.login .forgot {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.login .forgot span {
+  font-size: 13px;
+  color: #fff;
+}
+
+.login button.login {
+  padding: 13px 110px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo p {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 768px) {

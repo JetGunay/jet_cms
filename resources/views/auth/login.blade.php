@@ -4,7 +4,73 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            {{-- <div class="card">
+            <div class="centered login">
+                <article class="tile is-child box">
+
+                    <div class="logo">
+                        <p>{{ __('Log In')}} with</p>
+                    </div>
+
+                    <div class="content">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            {{-- Google Login --}}
+                            <a href="{{ url('redirect/google') }}" class="btn btn-1 btn-1c">
+                                <span>
+                                    <img src="{{ asset('images/icon-google.png') }}"> Google
+                                </span>
+                            </a>
+
+                            {{-- Login --}}
+                            {{-- Email input --}}
+                            <div class="field">
+                                <span class="input input--chisato">
+                                    <input class="input__field input__field--chisato input{{ $errors->has('email') ? ' is-danger' : '' }}" type="text" value="{{ old('email') }}" required>
+                                    <label class="input__label input__label--chisato" for="input-13">
+                                        <span class="input__label-content input__label-content--chisato" data-content="Email">Email</span>
+                                    </label>
+                                </span>
+                            </div>
+                            {{-- Password input --}}
+                            <div class="field">
+                                <span class="input input--chisato">
+                                    <input class="input__field input__field--chisato input{{ $errors->has('password') ? ' is-danger' : '' }}" type="password" required>
+                                    <label class="input__label input__label--chisato" for="input-13">
+                                        <span class="input__label-content input__label-content--chisato" data-content="Password">Password</span>
+                                    </label>
+                                </span>
+                            </div>
+                            {{-- Remember --}}
+                            <div class="remember">
+                                <input type="checkbox" class="form-check-input" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <span>{{ __('Remember Me') }}</span>
+                            </div>
+                            {{-- Login button --}}
+                            <div>
+                                <button class="btn btn-1 btn-1c login" type="submit">
+                                    <span>
+                                        {{ __('Login') }}
+                                    </span>
+                                </button>
+                            </div>
+                            {{-- Forgot Password --}}
+                            <div class="forgot">
+                                @if (Route::has('password.request'))
+                                    <a href="{{ route('password.request') }}">
+                                        <span>{{ __('Forgot Your Password') }}?</span>
+                                    </a>
+                                @endif
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+{{-- <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -67,70 +133,3 @@
                     </form>
                 </div>
             </div> --}}
-
-        <div class="tile is-ancestor">
-            <div class="tile is-parent is-8">
-                <article class="tile is-child box">
-                    <p class="title">{{ __('Log In')}}</p>
-                    {{-- <p class="subtitle">With some content</p> --}}
-                    <div class="content">
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-
-                            <div class="field">
-                                {{-- <label class="label">{{ __('Email') }}</label> --}}
-                                <div class="control has-icons-left has-icons-right">
-                                <input class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="field">
-                                {{-- <label class="label">{{ __('Password') }}</label> --}}
-                                <div class="control has-icons-left has-icons-right">
-                                    <input class="input{{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Password" required>
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-lock"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="checkbox">
-                                    <input type="checkbox" class="form-check-input" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                    {{ __('Remember Me') }}
-                                </label>
-                            </div>
-                            <div>
-                                <button type="submit" class="button is-custom">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a href="{{ url('redirect/google') }}" class="button is-link">Google</a>
-
-                                @if (Route::has('password.request'))
-                                    <a class="button is-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </form>
-                        
-                    </div>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title">Side column</p>
-                    <p class="subtitle">With some content</p>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-@endsection

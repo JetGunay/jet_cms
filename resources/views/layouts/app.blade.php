@@ -14,7 +14,14 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://tympanus.net/Development/TextInputEffects/css/set2.css">
+    <link rel="stylesheet" href="https://tympanus.net/Development/TextInputEffects/css/demo.css">
+    <link rel="stylesheet" href="https://tympanus.net/Development/CreativeLinkEffects/css/component.css">
+    <link rel="stylesheet" href="https://tympanus.net/Development/CreativeButtons/css/component.css">
+    <script src="https://tympanus.net/Development/CreativeLinkEffects/js/modernizr.custom.js"></script>
+    <script src="https://tympanus.net/Development/CreativeButtons/js/modernizr.custom.js"></script>
+    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css"> --}}
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -72,7 +79,7 @@
             </div>
         </nav> --}}
         @if (Auth::guest())
-        <main class="py-4">
+        <main class="py-4 login-page">
                 @yield('content')
             </main>
         @else 
