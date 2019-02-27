@@ -29,7 +29,7 @@
             </div>
         </div>
     </nav> --}}
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    {{-- <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="https://bulma.io">
                 <img src="{{ asset('images/logo.png') }}" width="112" height="28">
@@ -92,7 +92,7 @@
                     </button>         
                 @endif --}}
               
-                @if (Auth::guest())
+               {{-- @if (Auth::guest())
                   <div class="navbar-end">
                     <div class="navbar-item">
                       <div class="buttons">
@@ -120,39 +120,27 @@
           
               
             </div>
-          </nav>
-          {{-- <nav class="level navbar desktop" role="navigation" aria-label="main navigation">
-                <p class="level-item has-text-centered">
-                  <a class="link is-info">About</a>
-                </p>
-                <p class="level-item has-text-centered">
-                  <a class="link is-info">Profile</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="link is-info">Contact</a>
-                </p>
-                <p class="level-item has-text-centered">
-                  <img src="{{ asset('images/logo-jet.png') }}" alt="" style="height: 30px;">
-                </p>
-                <p class="level-item has-text-centered">
-                  <a class="link is-info">Settings</a>
-                </p>
-                <p class="level-item has-text-centered">
-                  <a class="link is-info">Signup</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="link is-info">Login</a>
-                </p>
-              </nav>
+          </nav> --}}
 
-        <nav class="level navbar mobile" role="navigation" aria-label="main navigation">
-            <p class="level-item has-text-centered">
-                <a class="link is-info"><i class="fa fa-info" aria-hidden="true"></i></a>
-            </p>
-            <p class="level-item has-text-centered">
-                <img src="{{ asset('images/logo-jet.png') }}" alt="" style="height: 30px;">
-            </p>
-            <p class="level-item has-text-centered">
-                <a class="link is-info"><i class="fa fa-info" aria-hidden="true"></i></a>
-            </p>
-        </nav> --}}
+<nav class="navbar has-shadow">
+  <div class="navbar-left">
+    <a class="navbar-item">
+      Website
+    </a>
+  </div>
+  <label for="menu-toggle" class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="navbar-right navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item is-tab is-active">
+        <span class="icon"><i class="fa fa-user"></i></span>
+      </a>
+      <a href="/logout" class="navbar-item is-tab">
+        <span class="icon"><i class="fa fa-sign-out"></i></span>
+      </a>
+    </div>
+  </div>
+</nav>

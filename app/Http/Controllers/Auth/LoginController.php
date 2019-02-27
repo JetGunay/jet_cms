@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -78,7 +78,7 @@ class LoginController extends Controller
                 $user->save();
                 Auth::loginUsingId($user->id);
             }
-            return redirect()->to('/home');
+            return redirect()->to('/dashboard');
         }
         catch (Exception $e) {
             return 'error';
@@ -126,6 +126,6 @@ class LoginController extends Controller
      public function logout(Request $request)
      {
          Auth::logout();
-         return redirect('/login');
+         return redirect('/admin');
      }
 }

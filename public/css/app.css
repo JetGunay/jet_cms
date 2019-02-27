@@ -17599,6 +17599,7 @@ label.panel-block:hover {
 html,
 body {
   font-family: "Poppins", sans-serif;
+  background: #fff;
 }
 
 textarea,
@@ -17788,6 +17789,57 @@ main.login-page:before {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 22px;
+}
+
+#app .sidenav-btn {
+  position: absolute;
+  z-index: 1;
+}
+
+#app .sidenav-btn a {
+  position: absolute;
+  left: -145px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 220px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+}
+
+#app .sidenav-btn a:hover {
+  left: 10px;
+}
+
+#app .sidenav-btn a span.icon {
+  margin: 0 6px;
+  float: right;
+}
+
+#app .sidenav-btn #dash {
+  top: 20px;
+  background: #3f6999;
+}
+
+#app .sidenav-btn #pages {
+  top: 85px;
+  background: #546696;
+}
+
+#app .sidenav-btn #posts {
+  top: 150px;
+  background: #88415c;
+}
+
+#app .sidenav-btn #categories {
+  top: 215px;
+  background: #ac4a58;
+}
+
+#app .sidenav-btn #settings {
+  top: 280px;
+  background: #cf5158;
 }
 
 @media screen and (max-width: 768px) {

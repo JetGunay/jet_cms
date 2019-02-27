@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Jet') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -84,9 +84,16 @@
             </main>
         @else 
             @include('_includes.nav.main')
-            <main class="py-4">
-                @yield('content')
-            </main>
+            <section class="main-content columns is-fullheight">
+                @include('_includes.nav.sidebar')
+                <div class="container column is-10">
+                    <div class="section">
+                        <main class="py-4">
+                            @yield('content')
+                        </main>
+                    </div>
+                </div>
+            </section>
         @endif
     </div>
 </body>

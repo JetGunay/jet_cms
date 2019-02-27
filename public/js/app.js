@@ -56458,6 +56458,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./custom */ "./resources/js/custom.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 Vue.use(buefy__WEBPACK_IMPORTED_MODULE_0___default.a);
@@ -56536,6 +56538,26 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/custom.js":
+/*!********************************!*\
+  !*** ./resources/js/custom.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// $(".sidebar").hover(
+//     function() {
+//         $(this).addClass('is-2');
+//         $(this).removeClass("is-1")
+//     },
+//     function() {
+//         $(this).removeClass("is-2");
+//         $(this).addClass("is-1");
+//     }
+// )
 
 /***/ }),
 

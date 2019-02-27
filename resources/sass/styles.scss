@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Poppins', sans-serif;
+    background: #fff;
 }
 textarea,
 input {
@@ -163,6 +164,54 @@ main.login-page {
         font-size: 22px;
     }
 }
+
+#app {
+    .sidenav-btn {
+        position: absolute;
+        z-index: 1;
+        a {
+            position: absolute;
+            left: -145px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 220px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 0 5px 5px 0;
+            color: #fff;
+
+            &:hover {
+                left: 10px;
+            }
+
+            span.icon {
+                margin: 0 6px;
+                float: right;
+            }
+        }
+        #dash {
+            top: 20px;
+            background: #3f6999;
+        }
+        #pages {
+            top: 85px;
+            background: #546696;
+        }
+        #posts {
+            top: 150px;
+            background: #88415c;
+        }
+        #categories {
+            top: 215px;
+            background: #ac4a58;
+        }
+        #settings {
+            top: 280px;
+            background: #cf5158;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .level.navbar {
         &.desktop {
