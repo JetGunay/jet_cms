@@ -15,11 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/redirect/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('/callback/{service}', 'Auth\LoginController@handleProviderCallback');
+
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+/**
+ * 
+ * Auth Middleware
+ * 
+ */
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+    Route::resource('/posts', 'PostController');
+});
 
 
 /**

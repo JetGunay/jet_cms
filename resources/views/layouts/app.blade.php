@@ -21,6 +21,19 @@
     <link rel="stylesheet" href="https://tympanus.net/Development/CreativeButtons/css/component.css">
     <script src="https://tympanus.net/Development/CreativeLinkEffects/js/modernizr.custom.js"></script>
     <script src="https://tympanus.net/Development/CreativeButtons/js/modernizr.custom.js"></script>
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+    <script>
+        tinymce.init({ 
+            selector:'#wysiwyg',
+            height: 500,
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "media table paste imagetools wordcount"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+    </script>
     {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css"> --}}
 
     <!-- Styles -->

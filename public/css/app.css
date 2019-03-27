@@ -17739,7 +17739,7 @@ main.login-page:before {
 .login .btn-1 {
   border: 0px;
   color: #000;
-  background-color: #fff;
+  background-color: #ffffff96;
 }
 
 .login .btn-1c:before {
@@ -17781,6 +17781,10 @@ main.login-page:before {
   padding: 13px 110px;
 }
 
+.login input {
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
 .logo {
   text-align: center;
 }
@@ -17791,9 +17795,21 @@ main.login-page:before {
   font-size: 22px;
 }
 
+#app nav.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+#app .main-content {
+  position: relative;
+  top: 85px;
+}
+
 #app .sidenav-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 999;
+  display: block;
+  position: fixed;
 }
 
 #app .sidenav-btn a {
@@ -17806,6 +17822,7 @@ main.login-page:before {
   font-size: 20px;
   border-radius: 0 5px 5px 0;
   color: #fff;
+  box-shadow: 2px 1px 5px 2px #c5c5c5;
 }
 
 #app .sidenav-btn a:hover {
@@ -17823,23 +17840,152 @@ main.login-page:before {
 }
 
 #app .sidenav-btn #pages {
-  top: 85px;
+  top: 90px;
   background: #546696;
 }
 
 #app .sidenav-btn #posts {
-  top: 150px;
+  top: 160px;
   background: #88415c;
 }
 
 #app .sidenav-btn #categories {
-  top: 215px;
+  top: 230px;
   background: #ac4a58;
 }
 
 #app .sidenav-btn #settings {
-  top: 280px;
+  top: 300px;
   background: #cf5158;
+}
+
+#app table.table {
+  width: 100%;
+}
+
+#app .column .title {
+  text-align: left;
+}
+
+#app .field .input--chisato {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0.5em;
+  height: 45px;
+  background-color: transparent;
+  border: 0;
+  box-shadow: inset 0 0px 0px transparent;
+  padding-top: 1em;
+}
+
+#app .field .input__field--chisato {
+  height: 51px;
+}
+
+#app .field .input__label--chisato {
+  z-index: 1;
+  top: -10%;
+  font-size: 17px;
+}
+
+#app .tox-tinymce {
+  border-radius: 5px;
+}
+
+#app input,
+#app textarea,
+#app .tox-tinymce {
+  box-shadow: 2px 2px 2px 2px whitesmoke;
+}
+
+#app .btn {
+  padding: 13px 80px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#app .btn:before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+#app .btn:hover span {
+  color: #fff;
+}
+
+#app .btn span {
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+#app .btn span img {
+  padding-right: 10px;
+}
+
+#app .btn-1 {
+  border: 0px;
+  color: #000;
+  background-color: #ffffff96;
+}
+
+#app .btn-1c:before {
+  border-radius: 5px;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#app .btn-1c:hover:before,
+#app .btn-1c:active:before {
+  width: 100%;
+}
+
+#app .btn-cprimary {
+  border: 1px solid #009bab;
+  color: #009bab;
+  width: 100%;
+  margin: 0;
+}
+
+#app .btn-cprimary:hover:before {
+  background: #009bab;
+}
+
+#app .btn-cdanger {
+  border: 1px solid #d24a4a;
+  color: #d24a4a;
+  width: 100%;
+  margin: 0;
+}
+
+#app .btn-cdanger:hover:before {
+  background: #d24a4a;
+}
+
+#app .right-clmn {
+  padding: 0.25rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#app .right-clmn .card-content {
+  padding: 0.5rem;
+}
+
+#app .btn-clmn .column {
+  padding: 0.25rem;
+}
+
+#app .btn-clmn .column .btn {
+  padding: 13px 25px;
 }
 
 @media screen and (max-width: 768px) {

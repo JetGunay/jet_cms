@@ -136,7 +136,8 @@
   <div class="navbar-right navbar-menu">
     <div class="navbar-end">
       <a class="navbar-item is-tab is-active">
-        <span class="icon"><i class="fa fa-user"></i></span>
+        {{-- <span class="icon"><i class="fa fa-user"></i></span> --}}
+        <img src="{{ Auth::user()->avatar }}" alt="">
       </a>
       <a href="/logout" class="navbar-item is-tab">
         <span class="icon"><i class="fa fa-sign-out"></i></span>
